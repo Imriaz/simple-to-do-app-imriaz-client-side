@@ -1,6 +1,5 @@
 import React from 'react';
 import emailjs from 'emailjs-com';
-import Footer from '../Shared/Footer/Footer';
 import Navigation from '../Shared/Navigation/Navigation';
 import './ContactUs.css'
 
