@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import { Grid } from '@mui/material';
 import { NavLink, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
-import Navigation from '../../Home/Shared/Navigation/Navigation';
-import Footer from '../../Home/Shared/Footer/Footer';
+import Navigation from '../../Shared/Navigation/Navigation';
+import Footer from '../../Shared/Footer/Footer';
 
 const Login = () => {
     const [loginData, setLoginData] = useState({});
@@ -66,7 +66,7 @@ const Login = () => {
                         <Button onClick={handleGoogleSignIn} variant="contained">Google Sign In</Button>
                     </Grid>
                     <Grid item xs={12} md={6}>
-                        <img style={{ width: '100%' }} src="https://i.ibb.co/2s8mR8K/amazing-motorbike-with-stencil-banner-for-copy-space.jpg" alt="" />
+                        <img style={{ width: '100%' }} src="https://i.ibb.co/kqNTsQh/login-banner.jpg" alt="" />
                     </Grid>
                 </Grid>
             </Container>
