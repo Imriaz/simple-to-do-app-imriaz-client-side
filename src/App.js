@@ -10,6 +10,8 @@ import Register from './pages/Login/Register/Register';
 import AuthProvider from './contexts/AuthProvider/AuthProvider';
 import PrivateRoute from '../src/pages/Login/PrivateRoute/PrivateRoute'
 import Dashboard from './pages/Dashboard/Dashboard/Dashboard';
+import BuySubscription from './pages/Dashboard/BuySubscription/BuySubscription';
+import AllSubscriptions from './pages/AllSubscriptions/AllSubscriptions';
 
 function App() {
   return (
@@ -38,9 +40,12 @@ function App() {
             <Route path="/contactUs">
               <ContactUs />
             </Route>
-            {/* <PrivateRoute path="/purchase/:productId">
-              <Purchase />
-            </PrivateRoute> */}
+            <Route path="/subscriptions">
+              <AllSubscriptions />
+            </Route>
+            <PrivateRoute path="/buySubscription/:subscriptionId">
+              <BuySubscription />
+            </PrivateRoute>
             <Route path='*'>
               <NotFound />
             </Route>

@@ -26,10 +26,18 @@ import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import AdminRoute from '../../Login/AdminRoute/AdminRoute';
 import ManageAllOrder from '../ManageAllOrder/ManageAllOrder';
 import AddProduct from '../CreateNotes/CreateNotes';
-import ManageAllProduct from '../ManageAllProduct/ManageAllProduct';
 import useAuth from '../../../hooks/useAuth';
 import CreateNotes from '../CreateNotes/CreateNotes';
 import MyNotes from '../MyNotes/MyNotes';
+import DeleteAccount from '../DeleteAccount/DeleteAccount'
+import EditUserProfile from '../EditUserProfile/EditUserProfile';
+import BuySubscription from '../BuySubscription/BuySubscription';
+import DeleteAdminAccount from '../DeleteAdminAccount/DeleteAdminAccount';
+import AllUsers from '../AllUsers/AllUsers';
+import EditAdminProfile from '../EditAdminProfile/EditAdminProfile'
+import AddSubscription from '../AddSubscription/AddSubscription';
+import ManageAllSubscription from '../ManageAllSubscription/ManageAllSubscription'
+import Subscriptions from '../../Subscriptions/Subscriptions';
 
 
 const drawerWidth = 200;
@@ -69,6 +77,18 @@ function Dashboard(props) {
                         <Button color="inherit">Payment</Button>
                     </Link>
                     <br />
+                    <Link style={{ textDecoration: 'none', color: 'black' }} to={`${url}/BuySubscription`}>
+                        <Button color="inherit">Buy Subscription</Button>
+                    </Link>
+                    <br />
+                    <Link style={{ textDecoration: 'none', color: 'black' }} to={`${url}/editUserProfile`}>
+                        <Button color="inherit">Edit Profile</Button>
+                    </Link>
+                    <br />
+                    <Link style={{ textDecoration: 'none', color: 'black' }} to={`${url}/deleteAccount`}>
+                        <Button color="inherit">Delete Account</Button>
+                    </Link>
+                    <br />
                 </Box>
             }
             <br />
@@ -77,13 +97,26 @@ function Dashboard(props) {
                     <Link style={{ textDecoration: 'none', color: 'black' }} to={`${url}/makeadmin`}>
                         <Button color="inherit">Make admin</Button>
                     </Link>
-                    {/* <Link style={{ textDecoration: 'none', color: 'black' }} to={`${url}/manageallorders`}>
-                        <Button color="inherit">Manage All Orders</Button>
-                    </Link> */}
-
-                    {/* <Link style={{ textDecoration: 'none', color: 'black' }} to={`${url}/manageallproduct`}>
-                        <Button color="inherit">Manage All Product</Button>
-                    </Link> */}
+                    <Link style={{ textDecoration: 'none', color: 'black' }} to={`${url}/allUsers`}>
+                        <Button color="inherit">Manage All Users</Button>
+                    </Link>
+                    <br />
+                    <Link style={{ textDecoration: 'none', color: 'black' }} to={`${url}/addSubscription`}>
+                        <Button color="inherit">Add Subscription</Button>
+                    </Link>
+                    <br />
+                    <Link style={{ textDecoration: 'none', color: 'black' }} to={`${url}/manageAllSubscription`}>
+                        <Button color="inherit">Manage All Subscription</Button>
+                    </Link>
+                    <br />
+                    <Link style={{ textDecoration: 'none', color: 'black' }} to={`${url}/editAdminProfile`}>
+                        <Button color="inherit">Edit My Profile</Button>
+                    </Link>
+                    <br />
+                    <Link style={{ textDecoration: 'none', color: 'black' }} to={`${url}/deleteAdminAccount`}>
+                        <Button color="inherit">Delete My Account</Button>
+                    </Link>
+                    <br />
                 </Box>
             }
             <br />
@@ -180,20 +213,35 @@ function Dashboard(props) {
                         <MyNotes />
                     </Route>
                     <Route path={`${path}/review`}>
-                        <Review></Review>
+                        <Review />
+                    </Route>
+                    <Route path={`${path}/BuySubscription`}>
+                        <Subscriptions />
+                    </Route>
+                    <Route path={`${path}/editUserProfile`}>
+                        <EditUserProfile />
+                    </Route>
+                    <Route path={`${path}/deleteAccount`}>
+                        <DeleteAccount />
                     </Route>
                     <AdminRoute path={`${path}/makeadmin`}>
                         <MakeAdmin></MakeAdmin>
                     </AdminRoute>
-                    {/* <AdminRoute path={`${path}/manageallorders`}>
-                        <ManageAllOrder></ManageAllOrder>
-                    </AdminRoute> */}
-                    {/* <AdminRoute path={`${path}/addproduct`}>
-                        <AddProduct></AddProduct>
-                    </AdminRoute> */}
-                    {/* <AdminRoute path={`${path}/manageallproduct`}>
-                        <ManageAllProduct />
-                    </AdminRoute> */}
+                    <AdminRoute path={`${path}/allUsers`}>
+                        <AllUsers />
+                    </AdminRoute>
+                    <AdminRoute path={`${path}/addSubscription`}>
+                        <AddSubscription />
+                    </AdminRoute>
+                    <AdminRoute path={`${path}/manageAllSubscription`}>
+                        <ManageAllSubscription />
+                    </AdminRoute>
+                    <AdminRoute path={`${path}/editAdminProfile`}>
+                        <EditAdminProfile />
+                    </AdminRoute>
+                    <AdminRoute path={`${path}/deleteAdminAccount`}>
+                        <DeleteAdminAccount />
+                    </AdminRoute>
                 </Switch>
 
 

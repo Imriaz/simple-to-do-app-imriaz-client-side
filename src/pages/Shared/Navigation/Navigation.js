@@ -28,7 +28,7 @@ const Navigation = () => {
                         To Do List
                     </Typography>
                     <NavLink style={{ textDecoration: 'none', color: 'white' }} to='/home'><Button color="inherit">Home</Button></NavLink>
-                    <NavLink style={{ textDecoration: 'none', color: 'white' }} to='/blogs'><Button color="inherit">Blogs</Button></NavLink>
+                    <NavLink style={{ textDecoration: 'none', color: 'white' }} to='/subscriptions'><Button color="inherit">Subscription</Button></NavLink>
                     <NavLink style={{ textDecoration: 'none', color: 'white' }} to='/contactUs'><Button color="inherit">Contact Us</Button></NavLink>
                     {user?.email ?
                         <Box>

@@ -54,6 +54,7 @@ const MyNotes = () => {
                             <td>{allNote?.Notes}</td>
                             <td>{allNote?.Date}</td>
                             {/* <td>{allNote?.name}</td> */}
+                            <button onClick={() => (allNote?._id)} className="btn bg-danger p-2 m-1">Edit</button>
                             <button onClick={() => handleDelete(allNote?._id)} className="btn bg-danger p-2 m-1">Delete</button>
                         </tr>
                     </tbody>

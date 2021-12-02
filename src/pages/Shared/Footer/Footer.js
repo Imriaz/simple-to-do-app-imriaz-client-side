@@ -15,7 +15,7 @@ const Footer = () => {
                     <p> Mirpur-10, Dhaka</p>
                 </div>
                 <div className="col-lg-3 col-sm-12">
-                    <h5>Our Future Feature</h5>
+                    <h5>Our Upcoming Offer & Feature</h5>
                     <br />
                     <p>You get a Reminder SMS on your phone</p>
                     <p>Subscription Charge will be reduce</p>
