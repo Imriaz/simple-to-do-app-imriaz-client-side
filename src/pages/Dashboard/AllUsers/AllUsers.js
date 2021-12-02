@@ -3,7 +3,7 @@ import { Table } from 'react-bootstrap';
 import useAuth from '../../../hooks/useAuth';
 
 const AllUsers = () => {
-    const { user, deleteUserAccount } = useAuth();
+    const { user, admin, deleteUserAccountByAdmin } = useAuth();
     const [allUsers, setAllUsers] = useState([]);
 
     useEffect(() => {
@@ -21,7 +21,7 @@ const AllUsers = () => {
                 .then(res => res.json())
                 .then(data => {
                     if (data.deletedCount > 0) {
-                        // deleteUserAccount();
+                        deleteUserAccountByAdmin(id);
                         alert("User Deleted Successfully");
                         const remainingUsers = allUsers?.filter(allUser => allUser._id !== id);
                         setAllUsers(remainingUsers);

@@ -69,10 +69,6 @@ function Dashboard(props) {
                         <Button color="inherit">Review</Button>
                     </Link>
                     <br />
-                    <Link style={{ textDecoration: 'none', color: 'black' }} to={`${url}/payment`}>
-                        <Button color="inherit">Payment</Button>
-                    </Link>
-                    <br />
                     <Link style={{ textDecoration: 'none', color: 'black' }} to={`${url}/BuySubscription`}>
                         <Button color="inherit">Buy Subscription</Button>
                     </Link>

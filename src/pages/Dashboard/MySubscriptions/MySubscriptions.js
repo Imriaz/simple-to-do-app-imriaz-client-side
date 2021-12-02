@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 
 const MySubscriptions = () => {
@@ -42,6 +43,7 @@ const MySubscriptions = () => {
                         <th>Notes Limit</th>
                         <th>Email</th>
                         <th>Price</th>
+                        <th>Payment Status</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -53,6 +55,9 @@ const MySubscriptions = () => {
                             <td>{allSubscription?.notesLimit}</td>
                             <td>{allSubscription?.email}</td>
                             <td>{allSubscription?.price}</td>
+                            <td>{allSubscription?.payment ? 'Paid' :
+                                <Link to={`/dashboard/payment/${allSubscription._id}`}><button className="btn bg-warning py-1 px-2">Pay</button></Link>
+                            }</td>
                             <button onClick={() => handleDelete(allSubscription?._id)} className="btn bg-danger p-2 m-1">Delete</button>
                         </tr>
                     </tbody>

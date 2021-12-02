@@ -126,6 +126,16 @@ const useFirebase = () => {
         })
             .finally(() => setIsLoading(false));
     }
+    const deleteUserAccountByAdmin = (uid) => {
+        const dID = getAuth().uid;
+        setIsLoading(true);
+        deleteUser(dID).then(() => {
+            // User Delete successful.
+        }).catch((error) => {
+            // An error happened.
+        })
+            .finally(() => setIsLoading(false));
+    }
 
     return {
         user,
@@ -138,6 +148,7 @@ const useFirebase = () => {
         authError,
         signInWithGoogle,
         deleteUserAccount,
+        deleteUserAccountByAdmin,
     }
 }
 
