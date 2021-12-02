@@ -9,6 +9,7 @@ import Login from './pages/Login/Login/Login';
 import Register from './pages/Login/Register/Register';
 import AuthProvider from './contexts/AuthProvider/AuthProvider';
 import PrivateRoute from '../src/pages/Login/PrivateRoute/PrivateRoute'
+import Dashboard from './pages/Dashboard/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -31,9 +32,9 @@ function App() {
             <PrivateRoute path="/blogs">
               <Blogs />
             </PrivateRoute>
-            {/* <PrivateRoute path="/dashboard">
+            <PrivateRoute path="/dashboard">
               <Dashboard />
-            </PrivateRoute> */}
+            </PrivateRoute>
             <Route path="/contactUs">
               <ContactUs />
             </Route>
