@@ -14,7 +14,7 @@ const AllSubscription = ({ item }) => {
                         <h3 class="card-text">{description}</h3>
                         <h4>Notes Limit: {notesLimit}</h4>
                         <h2>Price: {price}$ </h2>
-                        <Link to={`buySubscription/:${_id}`}>
+                        <Link to={`buySubscription/${_id}`}>
                             <button type="button" class="btn btn-outline-info m-2">Buy Subscription</button>
                         </Link>
                     </div>

@@ -3,7 +3,7 @@ import { Table } from 'react-bootstrap';
 import useAuth from '../../../hooks/useAuth';
 
 const AllUsers = () => {
-    const { user } = useAuth();
+    const { user, deleteUserAccount } = useAuth();
     const [allUsers, setAllUsers] = useState([]);
 
     useEffect(() => {
@@ -15,14 +15,14 @@ const AllUsers = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm("Are you sure, you want to delete?");
         if (proceed) {
-            fetch(`http://localhost:5000/deleteUser/${id}`, {
+            fetch(`http://localhost:5000/deleteUserAccount/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data);
                     if (data.deletedCount > 0) {
-                        alert("Deleted Successfully");
+                        // deleteUserAccount();
+                        alert("User Deleted Successfully");
                         const remainingUsers = allUsers?.filter(allUser => allUser._id !== id);
                         setAllUsers(remainingUsers);
                     }

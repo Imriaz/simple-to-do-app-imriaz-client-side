@@ -2,30 +2,29 @@ import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
 import useAuth from '../../../hooks/useAuth';
 
-const MyOrders = () => {
+const MySubscriptions = () => {
     const { user } = useAuth();
-    const [myOrders, setMyOrders] = useState([]);
+    const [mySubscriptions, setMySubscriptions] = useState([]);
 
     useEffect(() => {
-        fetch(`https://warm-hollows-05894.herokuapp.com/myOrders/${user?.email}`)
+        fetch(`http://localhost:5000/mySubscriptions/${user?.email}`)
             .then(res => res.json())
-            .then(data => setMyOrders(data));
+            .then(data => setMySubscriptions(data));
     }, [user?.email]);
 
     const handleDelete = (id) => {
         console.log(id);
         const proceed = window.confirm("Are you sure, you want to delete?");
         if (proceed) {
-            fetch(`https://warm-hollows-05894.herokuapp.com/deleteOrder/${id}`, {
+            fetch(`http://localhost:5000/deleteMySubscription/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data);
                     if (data.deletedCount > 0) {
                         alert("Deleted Successfully");
-                        const remainingOrders = myOrders?.filter(myOrder => myOrder._id !== id);
-                        setMyOrders(remainingOrders);
+                        const remainingSubscriptions = mySubscriptions?.filter(MySubscription => MySubscription._id !== id);
+                        setMySubscriptions(remainingSubscriptions);
                     }
                 });
             console.log(id);
@@ -34,29 +33,27 @@ const MyOrders = () => {
 
     return (
         <div className='myOrder-section'>
-            <h1 className='text-info'>Manage My Orders</h1>
+            <h1 className='text-info'>Manage My Subscriptions</h1>
             <Table bordered hover>
                 <thead>
                     <tr>
                         <th>Order No</th>
-                        <th>Name</th>
-                        <th>Products Name</th>
-                        <th>Price</th>
+                        <th>Subscriptions Name</th>
+                        <th>Notes Limit</th>
                         <th>Email</th>
-                        <th>Status</th>
+                        <th>Price</th>
                         <th>Action</th>
                     </tr>
                 </thead>
-                {myOrders?.map((allOrder, index) => (
+                {mySubscriptions?.map((allSubscription, index) => (
                     <tbody>
                         <tr>
                             <td>{index + 1}</td>
-                            <td>{allOrder?.name}</td>
-                            <td>{allOrder?.Name}</td>
-                            <td>{allOrder?.price}</td>
-                            <td>{allOrder?.email}</td>
-                            <td className='text-warning'>{allOrder?.status}</td>
-                            <button onClick={() => handleDelete(allOrder?._id)} className="btn bg-danger p-2 m-1">Delete</button>
+                            <td>{allSubscription?.packageName}</td>
+                            <td>{allSubscription?.notesLimit}</td>
+                            <td>{allSubscription?.email}</td>
+                            <td>{allSubscription?.price}</td>
+                            <button onClick={() => handleDelete(allSubscription?._id)} className="btn bg-danger p-2 m-1">Delete</button>
                         </tr>
                     </tbody>
                 ))}
@@ -65,4 +62,4 @@ const MyOrders = () => {
     );
 };
 
-export default MyOrders;
+export default MySubscriptions;

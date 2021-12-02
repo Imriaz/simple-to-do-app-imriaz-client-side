@@ -20,24 +20,20 @@ import { NavLink } from 'react-router-dom';
 import { Button } from '@mui/material';
 import DashboardHome from '../DashboardHome/DashboardHome';
 import Payment from '../Payment/Payment';
-import MyOrders from '../MyOrders/MyOrders';
 import Review from '../Review/Review';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import AdminRoute from '../../Login/AdminRoute/AdminRoute';
-import ManageAllOrder from '../ManageAllOrder/ManageAllOrder';
-import AddProduct from '../CreateNotes/CreateNotes';
 import useAuth from '../../../hooks/useAuth';
 import CreateNotes from '../CreateNotes/CreateNotes';
 import MyNotes from '../MyNotes/MyNotes';
 import DeleteAccount from '../DeleteAccount/DeleteAccount'
 import EditUserProfile from '../EditUserProfile/EditUserProfile';
-import BuySubscription from '../BuySubscription/BuySubscription';
 import DeleteAdminAccount from '../DeleteAdminAccount/DeleteAdminAccount';
 import AllUsers from '../AllUsers/AllUsers';
 import EditAdminProfile from '../EditAdminProfile/EditAdminProfile'
 import AddSubscription from '../AddSubscription/AddSubscription';
 import ManageAllSubscription from '../ManageAllSubscription/ManageAllSubscription'
-import Subscriptions from '../../Subscriptions/Subscriptions';
+import MySubscriptions from '../MySubscriptions/MySubscriptions';
 
 
 const drawerWidth = 200;
@@ -106,7 +102,7 @@ function Dashboard(props) {
                     </Link>
                     <br />
                     <Link style={{ textDecoration: 'none', color: 'black' }} to={`${url}/manageAllSubscription`}>
-                        <Button color="inherit">Manage All Subscription</Button>
+                        <Button color="inherit">All Subscription</Button>
                     </Link>
                     <br />
                     <Link style={{ textDecoration: 'none', color: 'black' }} to={`${url}/editAdminProfile`}>
@@ -216,7 +212,7 @@ function Dashboard(props) {
                         <Review />
                     </Route>
                     <Route path={`${path}/BuySubscription`}>
-                        <Subscriptions />
+                        <MySubscriptions />
                     </Route>
                     <Route path={`${path}/editUserProfile`}>
                         <EditUserProfile />

@@ -49,13 +49,7 @@ const CreateNotes = () => {
                             <input
                                 {...register("Date", { required: true })}
                                 placeholder="Date"
-                                className="p-2 m-2 w-100"
-                            />
-                            <br />
-
-                            <input
-                                {...register("img")}
-                                placeholder="Image Link"
+                                type="date"
                                 className="p-2 m-2 w-100"
                             />
                             <br />

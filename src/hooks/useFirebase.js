@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import initializeFirebase from "../pages/Login/Firebase/firebase.init";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged, signInWithPopup, GoogleAuthProvider, updateProfile, getIdToken } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged, signInWithPopup, GoogleAuthProvider, updateProfile, deleteUser, getIdToken } from "firebase/auth";
 
 // initialize firebase app
 initializeFirebase();
@@ -117,7 +117,15 @@ const useFirebase = () => {
             .then()
     }
 
-
+    const deleteUserAccount = () => {
+        setIsLoading(true);
+        deleteUser(auth.currentUser).then(() => {
+            // User Delete successful.
+        }).catch((error) => {
+            // An error happened.
+        })
+            .finally(() => setIsLoading(false));
+    }
 
     return {
         user,
@@ -129,6 +137,7 @@ const useFirebase = () => {
         logout,
         authError,
         signInWithGoogle,
+        deleteUserAccount,
     }
 }
 
