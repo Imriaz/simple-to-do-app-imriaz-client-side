@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 
 const AllUsers = () => {
@@ -69,7 +70,7 @@ const AllUsers = () => {
                             <td>{allUser?.displayName}</td>
                             <td>{allUser?.email}</td>
                             <td className='text-warning'>{allUser?.status}</td>
-                            <button onClick={() => handleStatus(allUser?._id)} className="btn bg-danger p-2 m-1">Edit</button>
+                            <Link to={`/dashboard/editUserProfile/${allUser._id}`}><button className="btn bg-warning py-1 px-2">Edit</button></Link>
                             <button onClick={() => handleDelete(allUser?._id)} className="btn bg-danger p-2">Delete</button>
                         </tr>
                     </tbody>

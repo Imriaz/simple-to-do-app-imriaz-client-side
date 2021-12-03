@@ -198,8 +198,8 @@ function Dashboard(props) {
                     <Route path={`${path}/createNotes`}>
                         <CreateNotes />
                     </Route>
-                    <Route path={`${path}/payment`}>
-                        <Payment></Payment>
+                    <Route path={`${path}/payment/:mySubscriptionId`}>
+                        <Payment />
                     </Route>
                     <Route path={`${path}/myNotes`}>
                         <MyNotes />
