@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# Your Trusted To Do List App: To Do List by Imriaz
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Description:
+To Do List by Imriaz is a renowned using app for listing daily personal work to maintain timely. People get more friendly feature on this app. [To Do List by Imriaz](https://to-do-app-by-imriaz.web.app/). In this Web app a user can create his account and store free notes a certain limit. after exist limit He/she need to subscribe a package by using PayPal payment method. User can gives review in this web app, and other everyone will see the review. In This app the admin can made subscription plan & manage all user.
 
-## Available Scripts
 
-In the project directory, you can run:
+## Feachers:
+•	For authentication method I used firebase authentication with mongoDB dataset.
+•	For store Subscriptions, Order, User, Notes, Review I used mongoDB database 
+•	Here is two types of access, one is User acces & another is Admin access
+•	User can create & update his notes
+•	User create his notes by writing Totle, Notes & Specific date wise
+•	User made purchase payment by using PayPal
+•	User can gives review
+•	User can delete his account
+•	User can ask anything / suggest anything by directly contact by email with admin by contact us menu. this is implement by EmailJS
+•	Admin can made any user, to Admin role
+•	Admin also can delete his account & also delete user's account
+• Admin create subscription packages
+•	Admin can delete a subscription packages
+•	Manage My subscription orders and aslo delete them by user
+•	Manage all users and also delete them by admin
 
-### `npm start`
+## Project Overview Screenshot
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## User can Update a Notes
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![image](https://user-images.githubusercontent.com/44776431/144570958-ed61f917-2793-4bb8-afd6-a49871db8caf.png)
 
-### `npm test`
+## PayPal Payment Method
+![paypalPayment](https://user-images.githubusercontent.com/44776431/144570685-7d6777ba-ce66-4a12-95b7-e439d493eb84.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Anyone Can contact with me directly my Email
+![image](https://user-images.githubusercontent.com/44776431/144572174-e0874ff4-6449-4ca5-8d1f-a25c4623c8a7.png)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Manage All Subscription Package
+![image](https://user-images.githubusercontent.com/44776431/144571855-d8af6407-e0c9-44be-899e-02f8bbe932a9.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Add Subscription Package
+![image](https://user-images.githubusercontent.com/44776431/144572053-73a6f1be-ec87-4764-9839-f1868af0fe02.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
