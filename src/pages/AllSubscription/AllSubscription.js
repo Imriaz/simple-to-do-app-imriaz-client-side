@@ -11,7 +11,7 @@ const AllSubscription = ({ item }) => {
                     <img src={img} class="card-image" alt="..." />
                     <div class="card-body">
                         <h1 class="card-title">{packageName}</h1>
-                        <h3 class="card-text">{description}</h3>
+                        <p class="card-text">{description}</p>
                         <h4>Notes Limit: {notesLimit}</h4>
                         <h2>Price: {price}$ </h2>
                         <Link to={`buySubscription/${_id}`}>

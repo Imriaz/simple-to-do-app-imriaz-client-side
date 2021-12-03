@@ -65,7 +65,7 @@ function Dashboard(props) {
                         <Button color="inherit">My Notes</Button>
                     </Link>
                     <br />
-                    <Link style={{ textDecoration: 'none', color: 'black' }} to={`${url}`}>
+                    <Link style={{ textDecoration: 'none', color: 'black' }} to={`${url}/review`}>
                         <Button color="inherit">Review</Button>
                     </Link>
                     <br />

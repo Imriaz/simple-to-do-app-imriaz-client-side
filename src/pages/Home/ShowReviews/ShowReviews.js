@@ -10,7 +10,7 @@ import './ShowReviews.css';
 const ShowReviews = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('https://warm-hollows-05894.herokuapp.com/addReview')
+        fetch('http://localhost:5000/addReview')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [products]);
@@ -18,6 +18,7 @@ const ShowReviews = () => {
         <>
             <div>
                 <h2 className='text-primary mt-5'>Review</h2>
+                <br />
             </div>
             <div className='products-container' id='products'>
                 {
