@@ -7,7 +7,7 @@ const ManageAllSubscription = () => {
     const [subscriptions, setSubscriptions] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/manageAllSubscription`)
+        fetch(`https://afternoon-ocean-09807.herokuapp.com/manageAllSubscription`)
             .then(res => res.json())
             .then(data => setSubscriptions(data));
     }, [subscriptions]);
@@ -16,7 +16,7 @@ const ManageAllSubscription = () => {
         console.log(id);
         const proceed = window.confirm("Are you sure, you want to delete?");
         if (proceed) {
-            fetch(`http://localhost:5000/deleteSubscription/${id}`, {
+            fetch(`https://afternoon-ocean-09807.herokuapp.com/deleteSubscription/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

@@ -25,7 +25,7 @@ const MyNote = ({ note, index, myNotes, setMyNotes, needUpdate, setNeedUpdate })
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        fetch(`http://localhost:5000/updateNote/${note._id}`, {
+        fetch(`https://afternoon-ocean-09807.herokuapp.com/updateNote/${note._id}`, {
             method: 'PATCH',
             headers: {
                 "Content-Type": "application/json"
@@ -59,7 +59,7 @@ const MyNote = ({ note, index, myNotes, setMyNotes, needUpdate, setNeedUpdate })
         console.log(id);
         const proceed = window.confirm("Are you sure, you want to delete?");
         if (proceed) {
-            fetch(`http://localhost:5000/deleteMyNotes/${id}`, {
+            fetch(`https://afternoon-ocean-09807.herokuapp.com/deleteMyNotes/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

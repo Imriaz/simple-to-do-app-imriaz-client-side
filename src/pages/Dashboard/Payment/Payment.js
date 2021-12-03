@@ -8,7 +8,7 @@ const Payment = () => {
     const [checkout, setCheckout] = useState(false);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/orders/${mySubscriptionId}`)
+        fetch(`https://afternoon-ocean-09807.herokuapp.com/orders/${mySubscriptionId}`)
             .then(res => res.json())
             .then(data => setMySubscription(data));
     }, [mySubscriptionId])

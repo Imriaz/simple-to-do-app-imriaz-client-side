@@ -7,7 +7,7 @@ const DeleteAccount = () => {
     const [User, setUser] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/manageAllUsers/${user?.email}`)
+        fetch(`https://afternoon-ocean-09807.herokuapp.com/manageAllUsers/${user?.email}`)
             .then(res => res.json())
             .then(data => setUser(data));
     }, [user?.email]);
@@ -15,7 +15,7 @@ const DeleteAccount = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm("Are you sure, you want to delete?");
         if (proceed) {
-            fetch(`http://localhost:5000/deleteUserAccount/${id}`, {
+            fetch(`https://afternoon-ocean-09807.herokuapp.com/deleteUserAccount/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

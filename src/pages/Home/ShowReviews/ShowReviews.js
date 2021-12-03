@@ -10,7 +10,7 @@ import './ShowReviews.css';
 const ShowReviews = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/addReview')
+        fetch('https://afternoon-ocean-09807.herokuapp.com/addReview')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [products]);

@@ -8,7 +8,7 @@ const AllUsers = () => {
     const [allUsers, setAllUsers] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/manageAllUsers')
+        fetch('https://afternoon-ocean-09807.herokuapp.com/manageAllUsers')
             .then(res => res.json())
             .then(data => setAllUsers(data));
     }, [allUsers?._id]);
@@ -16,7 +16,7 @@ const AllUsers = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm("Are you sure, you want to delete?");
         if (proceed) {
-            fetch(`http://localhost:5000/deleteUserAccount/${id}`, {
+            fetch(`https://afternoon-ocean-09807.herokuapp.com/deleteUserAccount/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -34,7 +34,7 @@ const AllUsers = () => {
     const handleStatus = (id) => {
         // const proceed = window.confirm("Are you sure, you want to Update Status?");
         // if (proceed) {
-        //     fetch(`http://localhost:5000/orders/${id}`, {
+        //     fetch(`https://afternoon-ocean-09807.herokuapp.com/orders/${id}`, {
         //         method: 'PUT',
         //         headers: {
         //             'content-type': 'application/json'

@@ -10,7 +10,7 @@ const MyNotes = () => {
     const [needUpdate, setNeedUpdate] = useState(false)
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myNotes/${user?.email}`)
+        fetch(`https://afternoon-ocean-09807.herokuapp.com/myNotes/${user?.email}`)
             .then(res => res.json())
             .then(data => setMyNotes(data));
     }, [needUpdate]);

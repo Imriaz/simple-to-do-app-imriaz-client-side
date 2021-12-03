@@ -10,7 +10,7 @@ const CreateNotes = () => {
     const onSubmit = data => {
         data.email = user?.email;
         data.CreatorName = user?.displayName;
-        fetch('http://localhost:5000/addNotes', {
+        fetch('https://afternoon-ocean-09807.herokuapp.com/addNotes', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(data),

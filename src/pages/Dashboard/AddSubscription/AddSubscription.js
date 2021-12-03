@@ -9,7 +9,7 @@ const AddSubscription = () => {
 
     const onSubmit = data => {
         //data.email = user?.email;
-        fetch('http://localhost:5000/addSubscription', {
+        fetch('https://afternoon-ocean-09807.herokuapp.com/addSubscription', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(data),

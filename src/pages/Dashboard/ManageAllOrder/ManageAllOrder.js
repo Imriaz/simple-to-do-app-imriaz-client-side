@@ -33,7 +33,7 @@ const ManageAllOrder = () => {
     const handleStatus = (id) => {
         // const proceed = window.confirm("Are you sure, you want to Update Status?");
         // if (proceed) {
-        //     fetch(`http://localhost:5000/orders/${id}`, {
+        //     fetch(`https://afternoon-ocean-09807.herokuapp.com/orders/${id}`, {
         //         method: 'PUT',
         //         headers: {
         //             'content-type': 'application/json'

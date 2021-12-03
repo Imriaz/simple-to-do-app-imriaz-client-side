@@ -14,7 +14,7 @@ const BuySubscription = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
     useEffect(() => {
-        fetch('http://localhost:5000/subscriptions')
+        fetch('https://afternoon-ocean-09807.herokuapp.com/subscriptions')
             .then(res => res.json())
             .then(data => {
                 const orderSubscription = data.find(singleOrder => singleOrder._id == subscriptionId)
@@ -26,7 +26,7 @@ const BuySubscription = () => {
     const onSubmit = data => {
         data.email = user?.email;
         // data.status = 'Pending';
-        fetch('http://localhost:5000/orders', {
+        fetch('https://afternoon-ocean-09807.herokuapp.com/orders', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(data),

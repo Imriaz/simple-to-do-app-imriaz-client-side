@@ -12,7 +12,7 @@ import './AllSubscriptions.css';
 const AllSubscriptions = () => {
     const [subscriptions, setSubscriptions] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/subscriptions')
+        fetch('https://afternoon-ocean-09807.herokuapp.com/subscriptions')
             .then(res => res.json())
             .then(data => setSubscriptions(data))
     }, []);
