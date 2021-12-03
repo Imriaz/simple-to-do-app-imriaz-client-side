@@ -13,6 +13,8 @@ To Do List by Imriaz is a renowned using app for listing daily personal work to 
 •	User made purchase payment by using PayPal
 •	User can gives review
 •	User can delete his account
+•	User can ask anything / suggest anything by directly contact by email with admin by contact us menu. this is implement by EmailJS
+•	Admin can made any user, to Admin role
 •	Admin also can delete his account & also delete user's account
 • Admin create subscription packages
 •	Admin can delete a subscription packages
@@ -25,8 +27,17 @@ To Do List by Imriaz is a renowned using app for listing daily personal work to 
 
 ![image](https://user-images.githubusercontent.com/44776431/144570958-ed61f917-2793-4bb8-afd6-a49871db8caf.png)
 
-
 ## PayPal Payment Method
 ![paypalPayment](https://user-images.githubusercontent.com/44776431/144570685-7d6777ba-ce66-4a12-95b7-e439d493eb84.png)
+
+## Anyone Can contact with me directly my Email
+![image](https://user-images.githubusercontent.com/44776431/144572174-e0874ff4-6449-4ca5-8d1f-a25c4623c8a7.png)
+
+
+## Manage All Subscription Package
+![image](https://user-images.githubusercontent.com/44776431/144571855-d8af6407-e0c9-44be-899e-02f8bbe932a9.png)
+
+## Add Subscription Package
+![image](https://user-images.githubusercontent.com/44776431/144572053-73a6f1be-ec87-4764-9839-f1868af0fe02.png)
 
 
